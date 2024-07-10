@@ -21,11 +21,11 @@ CONF_FLAGS=(
   -Llibswresample 
   -Llibswscale 
   -lavcodec 
-  -lavdevice 
+  # -lavdevice 
   -lavfilter 
   -lavformat 
   -lavutil 
-  -lpostproc 
+  # -lpostproc 
   -lswresample 
   -lswscale 
   -Wno-deprecated-declarations 
