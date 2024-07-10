@@ -153,10 +153,8 @@ COPY build/ffmpeg.sh /src/build.sh
 RUN bash -x /src/build.sh \
       --disable-all \
       --enable-gpl \
-      --enable-nonfree \
       --enable-zlib \
       --enable-libx264 \
-      --enable-libfdk-aac \
       --enable-protocol=file \
       --enable-avcodec \
       --enable-avformat \
@@ -165,9 +163,9 @@ RUN bash -x /src/build.sh \
       --enable-swscale \
       --enable-demuxer=mov \
       --enable-decoder=h264 \
-      --enable-decoder=libfdk_aac \
+      --enable-decoder=aac \
       --enable-encoder=libx264 \
-      --enable-encoder=libfdk_aac \
+      --enable-encoder=aac \
       --enable-parser=h264 \
       --enable-parser=aac \
       --enable-muxer=mp4 \
