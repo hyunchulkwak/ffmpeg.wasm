@@ -164,16 +164,27 @@ RUN bash -x /src/build.sh \
       --enable-swresample \
       --enable-swscale \
       --enable-demuxer=mov \
-      --enable-decoder=h264,libfdk_aac \
-      --enable-encoder=libx264,libfdk_aac \
-      --enable-parser=h264,aac \
+      --enable-decoder=h264 \
+      --enable-decoder=libfdk_aac \
+      --enable-encoder=libx264 \
+      --enable-encoder=libfdk_aac \
+      --enable-parser=h264 \
+      --enable-parser=aac \
       --enable-muxer=mp4 \
-      --enable-filter=trim,atrim \
-      --enable-filter=buffersink,scale,format,fps \
-      --enable-filter=abuffersink,aformat \
-      --enable-filter=transpose,hflip,vflip \
+      --enable-filter=trim \
+      --enable-filter=atrim \
+      --enable-filter=buffersink \
+      --enable-filter=scale \
+      --enable-filter=format \
+      --enable-filter=fps \
+      --enable-filter=abuffersink \
+      --enable-filter=aformat \
+      --enable-filter=transpose \
+      --enable-filter=hflip \
+      --enable-filter=vflip \
       --enable-filter=abuffer \
-      --enable-filter=amix,aresample
+      --enable-filter=amix \
+      --enable-filter=aresample
 
 # Build ffmpeg.wasm
 FROM ffmpeg-builder AS ffmpeg-wasm-builder
